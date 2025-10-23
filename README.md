@@ -34,7 +34,9 @@ Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual d
     pip install -r requirements.txt
 
 3. **Aksesibilitas**
+    ```bash
     Nyalakan akses terminal di Privacy & Scurity -> Aksesibilitas dan Privacy & Scurity -> Screen & System Audio Recording
+    
 5. **Jalankan**
     ```bash
     python3 macro.py
