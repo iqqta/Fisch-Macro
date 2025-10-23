@@ -18,7 +18,6 @@ Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual d
 
 - macOS, Windows, atau Linux  
 - Python **3.9+**
-- Layar resolusi minimal **1280x720**
 - Game Roblox dalam mode jendela (*windowed mode*)
 
 ---
@@ -27,7 +26,7 @@ Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual d
 
 1. **Clone repository ini:**
     ```bash
-    git clone https://github.com/<username>/FischMacro.git
+    git clone https://github.com/iqqta/FischMacro.git
     cd FischMacro
 
 2. **Install semua dependency:**
