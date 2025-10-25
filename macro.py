@@ -17,7 +17,7 @@ CONSECUTIVE_DETECT = 2
 CONSECUTIVE_LOST = 8
 WATCHDOG_TIMEOUT = 4.0  # detik
 
-bar_coords = [283, 687, 391, 26]
+bar_coords = [300, 687, 420, 26]
 
 running = False
 mouse_down = False
@@ -104,13 +104,28 @@ def worker_loop(gui_update_callback=None):
             consec_lost += 1
             consec_detect = 0
 
+        # ----------- JIKA BAR HILANG / IDLE ----------
         if consec_lost >= CONSECUTIVE_LOST:
             safe_mouse_up()
             last_gx = None
             gui_update_callback("Idle / Bar Not Found")
-            time.sleep(0.1)
+
+            # ---- WATCHDOG SAAT IDLE ----
+            if time.time() - last_state_change > WATCHDOG_TIMEOUT:
+                print("[watchdog] re-cast")
+                try:
+                    pyautogui.mouseDown()
+                    time.sleep(TAP_DURATION)
+                    pyautogui.mouseUp()
+                    gui_update_callback("Auto Cast (Recovered)")
+                except Exception as e:
+                    print("[watchdog-idle tap] error:", e)
+                last_state_change = time.time()
+
+            time.sleep(CAPTURE_DELAY)
             continue
 
+        # ----------- SAAT BAR TERDETEKSI ----------
         if cx is not None:
             if last_gx is not None:
                 gx = int(last_gx * SMOOTH_FACTOR + cx * (1 - SMOOTH_FACTOR))
@@ -148,6 +163,7 @@ def worker_loop(gui_update_callback=None):
             current_state = new_state
             last_state_change = time.time()
 
+        # ----------- WATCHDOG SAAT REELING ----------
         if time.time() - last_state_change > WATCHDOG_TIMEOUT:
             print("[watchdog] refresh mouse")
             safe_mouse_up()
@@ -169,7 +185,7 @@ def worker_loop(gui_update_callback=None):
 
 # ---------- GUI ----------
 root = tk.Tk()
-root.title("Fisch Macro V1")
+root.title("Fisch Macro V1.1")
 root.geometry("480x360")
 root.minsize(420, 320)
 root.resizable(True, True)
@@ -208,17 +224,14 @@ coords_frame.columnconfigure((1, 3), weight=1)
 btn_frame = ttk.Frame(main_frame)
 btn_frame.pack(fill="x", pady=10)
 
-# Pisahkan tombol kiri & kanan agar responsif
 left_btns = ttk.Frame(btn_frame)
 left_btns.pack(side="left", anchor="w")
 
 right_btns = ttk.Frame(btn_frame)
 right_btns.pack(side="right", anchor="e")
 
-# Tombol kiri
 ttk.Button(left_btns, text="Open Overlay", command=lambda: open_overlay()).pack(side="left", padx=4)
 
-# Tombol kanan
 ttk.Button(right_btns, text="Stop", command=lambda: stop_macro()).pack(side="right", padx=4)
 ttk.Button(right_btns, text="Start", command=lambda: start_macro()).pack(side="right", padx=4)
 
