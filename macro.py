@@ -185,7 +185,7 @@ def worker_loop(gui_update_callback=None):
 
 # ---------- GUI ----------
 root = tk.Tk()
-root.title("Fisch Macro V1.1")
+root.title("Fisch Macro")
 root.geometry("480x360")
 root.minsize(420, 320)
 root.resizable(True, True)
