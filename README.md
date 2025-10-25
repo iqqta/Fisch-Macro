@@ -1,6 +1,6 @@
-# 🎣 Fisch Macro V1
+# 🎣 Fisch Macro
 
-**Fisch Macro V1** adalah script Python otomatisasi untuk mendeteksi dan mengontrol aksi "reeling" pada game *Fisch* di Roblox.  
+**Fisch Macro** adalah script Python otomatisasi untuk mendeteksi dan mengontrol aksi "reeling" pada game *Fisch* di Roblox.  
 Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual di layar dan melakukan klik/drag otomatis menggunakan PyAutoGUI.
 
 ---
@@ -16,24 +16,30 @@ Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual d
 
 ## ⚙️ Persyaratan Sistem
 
-- macOS, Windows, atau Linux  
+- macOS atau Windows 
 - Python **3.9+**
-- Layar resolusi minimal **1280x720**
 - Game Roblox dalam mode jendela (*windowed mode*)
 
 ---
 
 ## 📦 Instalasi
 
-1. **Clone repository ini:**
+1. **Clone atau download repository ini:**
     ```bash
-    git clone https://github.com/<username>/FischMacro.git
+    git clone https://github.com/iqqta/FischMacro.git
     cd FischMacro
 
 2. **Install semua dependency:**
     ```bash
     pip install -r requirements.txt
 
-3. **Jalankan**
+3. **Aksesibilitas**
+    ```bash
+    Nyalakan akses terminal di
+    Privacy & Scurity -> Aksesibilitas
+    Privacy & Scurity -> Screen & System Audio Recording
+    
+5. **Jalankan**
     ```bash
     python3 macro.py
+
