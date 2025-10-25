@@ -31,7 +31,7 @@ Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual d
 
 2. **Install semua dependency:**
     ```bash
-    pip install -r requirements.txt
+    pip3 install opencv-python pyautogui numpy pillow
 
 3. **Aksesibilitas**
     ```bash
