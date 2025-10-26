@@ -4,6 +4,11 @@
 Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual di layar dan melakukan reel otomatis menggunakan PyAutoGUI.
 
 ---
+## 🖼️ Tampilan Aplikasi
+
+Berikut tampilan GUI dari **Fisch Macro** saat dijalankan di macOS:
+
+![Tampilan Fisch Macro](assets/screenshot.png)
 
 ## 🧩 Fitur Utama
 
