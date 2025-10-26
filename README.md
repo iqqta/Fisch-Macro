@@ -1,16 +1,16 @@
 # 🎣 Fisch Macro
 
 **Fisch Macro** adalah script Python otomatisasi untuk mendeteksi dan mengontrol aksi "reeling" pada game *Fisch* di Roblox.  
-Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual di layar dan melakukan klik/drag otomatis menggunakan PyAutoGUI.
+Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual di layar dan melakukan reel otomatis menggunakan PyAutoGUI.
 
 ---
 
 ## 🧩 Fitur Utama
 
 - 🔍 Deteksi bar *reeling* secara real-time dari tangkapan layar.
-- 🖱️ Klik otomatis berdasarkan posisi bar.
+- 🖱️ Reel otomatis berdasarkan posisi bar.
 - 🪟 GUI interaktif berbasis **Tkinter** (dapat disesuaikan area tangkapannya).
-- 📏 Overlay transparan untuk mengatur area deteksi hit box reel dengan drag & drop.
+- 📏 Overlay transparan untuk mengatur area deteksi hit box reel dengan drag & resize.
 
 ---
 
@@ -18,7 +18,7 @@ Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual d
 
 - macOS atau Windows 
 - Python **3.9+**
-- Game Roblox dalam mode jendela (*windowed mode*)
+- Game Roblox & Macro dalam mode jendela (*windowed mode bukan full screen/split screen*)
 
 ---
 
@@ -33,7 +33,7 @@ Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual d
     ```bash
     pip3 install opencv-python pyautogui numpy pillow
 
-3. **Aksesibilitas**
+3. **Aksesibilitas (Mac OS)**
     ```bash
     Nyalakan akses terminal di
     Privacy & Scurity -> Aksesibilitas
