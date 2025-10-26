@@ -24,7 +24,7 @@ Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual d
 
 ## 📦 Instalasi
 
-1. **Clone atau download repository ini:**
+1. **Download atau clone repository ini:**
     ```bash
     git clone https://github.com/iqqta/FischMacro.git
     cd FischMacro
