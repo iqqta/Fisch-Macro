@@ -35,8 +35,8 @@ Program ini menggunakan *computer vision* (OpenCV) untuk mendeteksi bar visual d
 3. **Aksesibilitas (Mac OS)**
     ```bash
     Nyalakan akses terminal di
-    Privacy & Scurity -> Aksesibilitas
-    Privacy & Scurity -> Screen & System Audio Recording
+    Privacy & Security -> Aksesibilitas
+    Privacy & Security -> Screen & System Audio Recording
     
 5. **Jalankan**
     ```bash
